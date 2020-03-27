@@ -38,17 +38,30 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
         groupLight.SetActive(true);
     }
+    
+    /// <summary>
+    /// 開始移動寶箱
+    /// </summary>
+    public void StartMoveChest()
+    {
+        StartCoroutine(MoveChest());
+    }
 
+    // 注視點或按鈕無法呼叫協程
+    /// <summary>
+    /// 移動寶箱
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator MoveChest()
     {
         // 前：forward
         // 右：right
         // 上：up
         // for 迴圈(初始值，條件，跌代器 - 每次回圈結束要執行的敘述)
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 20; i++)
         {
-            chest.position -= chest.forward;            // 寶箱.座標 遞減 寶箱.前方
-            yield return new WaitForSeconds(0.01f);
+            chest.position += chest.forward * 0.3f;            // 寶箱.座標 遞減 寶箱.前方
+            yield return new WaitForSeconds(0.001f);
         }
     }
 
