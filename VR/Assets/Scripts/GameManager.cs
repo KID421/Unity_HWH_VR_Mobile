@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public GameObject groupLight;
     [Header("會動的寶箱")]
     public Transform chest;
+    [Header("會動的燭燈")]
+    public Transform candle;
 
     // 定義方法 (Method)：有特定內容的功能
     // 修飾詞 傳回類型 方法名稱 () { 敘述 }
@@ -61,6 +63,30 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < 20; i++)
         {
             chest.position += chest.forward * 0.3f;            // 寶箱.座標 遞減 寶箱.前方
+            yield return new WaitForSeconds(0.001f);
+        }
+        // GetComponent<泛型>() 取得元件：可以取得物件在屬性面板上的所有元件
+        // enable 元件啟動或停止：true 啟動 false 停止
+        chest.GetComponent<CapsuleCollider>().enabled = false;
+    }
+
+    /// <summary>
+    /// 開始移動燭燈
+    /// </summary>
+    public void StartMoveCandle()
+    {
+        StartCoroutine(MoveCandle());
+    }
+
+    /// <summary>
+    /// 移動燭燈
+    /// </summary>
+    /// <returns></returns>
+    public IEnumerator MoveCandle()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            candle.position += candle.forward * 0.3f;
             yield return new WaitForSeconds(0.001f);
         }
     }
