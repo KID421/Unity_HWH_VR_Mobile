@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/VR \u624B\u6A5F\u904A\u6232.unity"
+    guid: 65a03a0aae2374543af012b86682c6d9
   m_configObjects: {}
