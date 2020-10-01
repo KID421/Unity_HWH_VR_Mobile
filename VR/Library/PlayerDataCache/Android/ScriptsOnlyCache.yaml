@@ -21,7 +21,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -72,19 +71,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11812}
+      Script: {instanceID: 11816}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 12140}
     - Class: 114
-      Script: {instanceID: 12444}
+      Script: {instanceID: 12448}
     - Class: 114
-      Script: {instanceID: 13168}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13328}
+      Script: {instanceID: 13330}
     - Class: 114
-      Script: {instanceID: 13804}
+      Script: {instanceID: 13806}
     - Class: 114
-      Script: {instanceID: 13848}
+      Script: {instanceID: 13850}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -935,4 +934,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - "Assets/VR \u624B\u6A5F\u904A\u6232.unity"
-  playerPath: C:/KID/Unity_HWH_VR_Mobile/HorrorVR.apk
+  playerPath: C:/KID/Projects/Unity/Unity_HWH_VR_Mobile/VRWhatInRoom.apk
